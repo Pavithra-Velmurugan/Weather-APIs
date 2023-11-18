@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherFinder</title>
+  </head>
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: sans-serif;
+      font-style: italic;
+      font: bold;
+    }
+    .bg {
+      background-image: url("https://img.freepik.com/free-vector/flat-design-monsoon-season-clouds-illustration_23-2149424294.jpg");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: auto;
+      padding: 10px;
+    }
+    p {
+      color: blue;
+    }
+    option {
+      font-style: italic;
+    }
+    select {
+      height: 50%;
+      width: 25%;
+      border-color: black;
+      border-style: bold;
+    }
+  </style>
+  <script src="script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/b5296b35e3.js"
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <div class="bg">
+      <h1 style="text-align: center; color: blue; font-style: italic">
+        <i class="fa-solid fa-cloud-sun fa-2xl" style="color: #ffe642"></i
+        ><b>Climate Flare</b>
+      </h1>
+      <div
+        style="
+          text-align: center;
+          vertical-align: middle;
+          align-content: center;
+          margin-top: 300px;
+        "
+      >
+        <label for="city"><b>Choose City</b></label>
+        <select
+          id="city"
+          name="city"
+          onclick="loadCity()"
+          onchange="loadTemperature()"
+        ></select>
+        <p id="weatherdisplay"></p>
+      </div>
+    </div>
+  </body>
+</html>
